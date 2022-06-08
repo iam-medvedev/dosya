@@ -1,0 +1,17 @@
+{
+  "imports": {
+    "testing": "https://deno.land/std@0.142.0/testing/asserts.ts",
+    "file-type": "https://ga.jspm.io/npm:file-type@17.1.2/index.js"
+  },
+  "scopes": {
+    "https://ga.jspm.io/": {
+      "ieee754": "https://ga.jspm.io/npm:ieee754@1.2.1/index.js",
+      "peek-readable": "https://ga.jspm.io/npm:peek-readable@5.0.0-alpha.5/lib/index.js",
+      "strtok3": "https://ga.jspm.io/npm:strtok3@7.0.0-alpha.8/lib/index.js",
+      "strtok3/core": "https://ga.jspm.io/npm:strtok3@7.0.0-alpha.8/lib/core.js",
+      "token-types": "https://ga.jspm.io/npm:token-types@5.0.0-alpha.2/lib/index.js",
+      "node:buffer": "https://ga.jspm.io/npm:@jspm/core@2.0.0-beta.24/nodelibs/browser/buffer.js",
+      "node:fs": "https://ga.jspm.io/npm:@jspm/core@2.0.0-beta.24/nodelibs/browser/fs.js"
+    }
+  }
+}
