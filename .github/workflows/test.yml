@@ -21,4 +21,4 @@ jobs:
           deno-version: v1.x
 
       - name: Test
-        run: make test-ci
+        run: deno task test:ci

@@ -1,5 +1,5 @@
 import { fileTypeFromBuffer } from "file-type";
-import { assertEquals } from "testing";
+import { assertEquals } from "testing/asserts.ts";
 import { createFile } from "./mod.ts";
 import { extKeys, Extensions } from "./extensions.ts";
 

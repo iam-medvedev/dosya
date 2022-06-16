@@ -2,7 +2,7 @@
 
 `dosya` (Turkish) — file _n._
 
-Zero-dependency module for creating buffer for the requested file type.
+Module for creating buffer for the requested file type.
 
 This module is heavily inspired by [`file-type`](https://github.com/sindresorhus/file-type) and does the reverse work.
 
@@ -20,15 +20,14 @@ console.log(await fileTypeFromBuffer(buffer));
 ## Benefits
 
 - 130 extensions are available
-- Zero-dependency
 - Written in Deno
 - Fully typed
-- Available for Deno and Node.js
+- Available for Deno / Node.js / CLI
 
-## Node.js usage
+## Node.js Usage
 
 ```bash
-yarn add -D dosya
+$ yarn add -D dosya
 ```
 
 ```ts
@@ -37,12 +36,21 @@ import { createFile } from "dosya";
 const buffer = createFile("mp4");
 ```
 
-## Deno usage
+## Deno Usage
 
 ```ts
-import { createFile } from "https://deno.land/x/dosya";
+import { createFile } from "https://deno.land/x/dosya/mod.ts";
 
 const buffer = createFile("mp4");
+```
+
+## CLI Usage
+
+```bash
+$ deno install -n dosya --allow-write --allow-read https://deno.land/x/dosya/cli.ts
+$ dosya --ext mp3 ./example.mp3
+$ file ./example.mp3
+example.mp3: Audio file with ID3 version 2.0.0
 ```
 
 ## Why?

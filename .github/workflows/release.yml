@@ -17,7 +17,7 @@ jobs:
           deno-version: v1.x
 
       - name: Parse commit
-        uses: iam-medvedev/action-conventional-commit@init
+        uses: iam-medvedev/action-conventional-commit@main
         id: get-label
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -38,7 +38,7 @@ jobs:
           level: ${{ steps.get-label.outputs.type }}
 
       - name: Build node.js version
-        run: make build version=${{ steps.bump-semver.outputs.new_version }}
+        run: deno task build ${{ steps.bump-semver.outputs.new_version }}
 
       - name: Copy assets
         run: cp README.md import_map.json ./src/

@@ -1,4 +1,4 @@
-import { build, emptyDir } from "https://deno.land/x/dnt@0.25.2/mod.ts";
+import { build, emptyDir } from "https://deno.land/x/dnt@0.26.0/mod.ts";
 
 const newVersion = Deno.args[0];
 if (!newVersion) {
@@ -8,7 +8,15 @@ if (!newVersion) {
 await emptyDir("./npm");
 
 await build({
-  entryPoints: ["./src/mod.ts"],
+  entryPoints: [
+    "./src/mod.ts",
+    {
+      kind: "bin",
+      name: "dosya",
+      path: "./src/cli.ts",
+    },
+  ],
+  importMap: "./import_map.json",
   outDir: "./npm",
   shims: {
     deno: true,
@@ -19,8 +27,7 @@ await build({
   package: {
     name: "dosya",
     version: newVersion.replace("v", ""),
-    description:
-      "Zero-dependency module for creating buffer for the requested file type.",
+    description: "Module for creating buffer for the requested file type.",
     author: "Ilya Medvedev <ilya@medvedev.im>",
     license: "WTFPL",
     homepage: "https://github.com/iam-medvedev/dosya#readme",
