@@ -1,0 +1,10 @@
+{
+  "importMap": "./import_map.json",
+  "tasks": {
+    "dev": "deno run --watch src/mod.ts",
+    "dev:cli": "deno run --allow-read --allow-write src/cli.ts",
+    "test": "deno test --watch src/mod_test.ts src/cliStart_test.ts",
+    "test:ci": "deno test src/mod_test.ts src/cliStart_test.ts",
+    "build": "deno run -A build.ts"
+  }
+}

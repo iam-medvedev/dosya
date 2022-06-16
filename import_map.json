@@ -1,6 +1,7 @@
 {
   "imports": {
-    "testing": "https://deno.land/std@0.142.0/testing/asserts.ts",
+    "testing/": "https://deno.land/std@0.144.0/testing/",
+    "flags": "https://deno.land/std@0.144.0/flags/mod.ts",
     "file-type": "https://ga.jspm.io/npm:file-type@17.1.2/index.js"
   },
   "scopes": {
